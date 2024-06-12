@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Landing Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+            transition: background 0.5s ease-in-out;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .container img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .container h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .container p {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .container a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            color: #fff;
+            background-color: #3897f0;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .container a:hover {
+            background-color: #287dc1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+        <h1>Welcome to Our Instagram Page!</h1>
+        <p>Follow us on Instagram to stay updated with our latest posts and stories.</p>
+        <a href="https://www.instagram.com/_meet_71?igsh=MWpnNjd4MGZ2cDJzcA== " target="_blank">Follow Us</a>
+    </div>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            const r = Math.floor(255 * x);
+            const g = Math.floor(128 * y);
+            const b = 200;
+
+            const color1 = `rgb(${r}, ${g}, ${b})`;
+            const color2 = `rgb(${255 - r}, ${128 - g}, ${b})`;
+
+            document.body.style.background = `linear-gradient(to right, ${color1}, ${color2})`;
+        });
+    </script>
+</body>
+</html>
